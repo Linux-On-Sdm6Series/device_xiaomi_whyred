@@ -32,59 +32,58 @@
 #
 baseband=`getprop ro.baseband`
 sgltecsfb=`getprop persist.vendor.radio.sglte_csfb`
-datamode=`getprop persist.data.mode`
+datamode=`getprop persist.vendor.data.mode`
+rild_status=`getprop init.svc.ril-daemon`
+vendor_rild_status=`getprop init.svc.vendor.ril-daemon`
 
 case "$baseband" in
-    "apq" | "sda" )
-    setprop ro.radio.noril yes
-    stop ril-daemon
+    "apq" | "sda" | "qcs" )
+    setprop ro.vendor.radio.noril yes
+    if [ -n "$rild_status" ] || [ -n "$vendor_rild_status" ]; then
+      stop ril-daemon
+      stop vendor.ril-daemon
+      start vendor.ipacm
+    fi
 esac
 
 case "$baseband" in
-    "msm" | "csfb" | "svlte2a" | "mdm" | "mdm2" | "sglte" | "sglte2" | "dsda2" | "unknown" | "dsda3")
-    start qmuxd
-esac
+    "msm" | "csfb" | "svlte2a" | "mdm" | "mdm2" | "sglte" | "sglte2" | "dsda2" | "unknown" | "dsda3" | "sdm" | "sdx" | "sm6")
+    # Get ril-daemon status again to ensure that we have latest info
+    rild_status=`getprop init.svc.ril-daemon`
+    vendor_rild_status=`getprop init.svc.vendor.ril-daemon`
 
-case "$baseband" in
-    "msm" | "csfb" | "svlte2a" | "mdm" | "mdm2" | "sglte" | "sglte2" | "dsda2" | "unknown" | "dsda3" | "sdm" | "sdx")
-    start ipacm-diag
-    start ipacm
-    case "$baseband" in
-        "svlte2a" | "csfb")
-          start qmiproxy
-        ;;
-        "sglte" | "sglte2" )
-          if [ "x$sgltecsfb" != "xtrue" ]; then
-              start qmiproxy
-          else
-              setprop persist.vendor.radio.voice.modem.index 0
-          fi
-        ;;
-        "dsda2")
-          setprop persist.radio.multisim.config dsda
-    esac
+    if [[ -z "$rild_status" || "$rild_status" = "stopped" ]] && [[ -z "$vendor_rild_status" || "$vendor_rild_status" = "stopped" ]]; then
+      start vendor.qcrild
+    fi
+    start vendor.ipacm
 
     multisim=`getprop persist.radio.multisim.config`
 
     if [ "$multisim" = "dsds" ] || [ "$multisim" = "dsda" ]; then
-        start ril-daemon2
+        if [[ -z "$rild_status" || "$rild_status" = "stopped" ]] && [[ -z "$vendor_rild_status" || "$vendor_rild_status" = "stopped" ]]; then
+          start vendor.qcrild2
+        else
+          start vendor.ril-daemon2
+        fi
     elif [ "$multisim" = "tsts" ]; then
-        start ril-daemon2
-        start ril-daemon3
+        if [[ -z "$rild_status" || "$rild_status" = "stopped" ]] && [[ -z "$vendor_rild_status" || "$vendor_rild_status" = "stopped" ]]; then
+          start vendor.qcrild2
+          start vendor.qcrild3
+        else
+          start vendor.ril-daemon2
+        fi
     fi
 
     case "$datamode" in
         "tethered")
-            start qti
-            start port-bridge
+            start vendor.qti
             ;;
         "concurrent")
-            start qti
-            start netmgrd
-            start port-bridge
+            start vendor.qti
+            start vendor.netmgrd
             ;;
         *)
-            start netmgrd
+            start vendor.netmgrd
             ;;
     esac
 esac
