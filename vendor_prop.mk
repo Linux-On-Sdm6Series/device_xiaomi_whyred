@@ -1,6 +1,32 @@
  # vendor props
 PRODUCT_PROPERTY_OVERRIDES += \
-    DEVICE_PROVISIONED=1 \
+    persist.sys.job_delay=true \
+    persist.sys.mcd_config_file=/system/etc/mcd_default.conf \
+    persist.sys.perf.debug=true \
+    persist.sys.whetstone.level=2 \
+    drm.service.enabled=true \
+    dalvik.vm.heapgrowthlimit=256m \
+    dalvik.vm.heapstartsize=8m \
+    dalvik.vm.heapsize=512m \
+    dalvik.vm.heaptargetutilization=0.75 \
+    dalvik.vm.heapminfree=512k \
+    dalvik.vm.heapmaxfree=8m \
+    video.disable.ubwc=1 \
+    persist.radio.multisim.config=dsds \
+    persist.vendor.qcomsysd.enabled=1 \
+    ro.com.android.dataroaming=true \
+    ro.vendor.extension_library=libqti-perfd-client.so \
+    persist.vendor.radio.apm_sim_not_pwdn=1 \
+    persist.vendor.radio.sib16_support=1 \
+    persist.vendor.radio.custom_ecc=1 \
+    persist.vendor.radio.rat_on=combine \
+    persist.radio.schd.cache=3500 \
+    sys.vendor.shutdown.waittime=500 \
+    ro.build.shutdown_timeout=0 \
+    ro.frp.pst=/dev/block/bootdevice/by-name/frp \
+    ro.opengles.version=196610 \
+    ro.qualcomm.cabl=0 \
+    vendor.qcom.bluetooth.soc=cherokee \
     af.fast_track_multiplier=1 \
     audio.adm.buffering.ms=6 \
     audio.deep_buffer.media=true \
@@ -61,22 +87,37 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.enable-qcp=true \
     media.stagefright.enable-scan=true \
     mm.enable.qcom_parser=13631471 \
-    mm.enable.smoothstreaming=true \
-    mmp.enable.3g2=true \
-    persist.activate_mbn.enabled=false \
-    persist.backup.ntpServer="0.pool.ntp.org" \
-    persist.bt.a2dp.aac_disable=true \
-    persist.camera.depth.focus.cb=0 \
-    persist.camera.eis.enable=1 \
-    persist.camera.hist.drc=1.2 \
-    persist.camera.hist.high=20 \
-    persist.camera.isp.clock.optmz=0 \
-    persist.camera.isp.turbo=1 \
-    persist.camera.linkpreview=0 \
-    persist.camera.preview.ubwc=0 \
-    persist.camera.stats.test=0 \
-    persist.chg.max_volt_mv=9000 \
-    persist.cne.feature=1 \
+    persist.mm.enable.prefetch=true \
+    vidc.enc.dcvs.extra-buff-count=2
+
+#
+# system props for the data modules
+#
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.use_data_netmgrd=true \
+    persist.data.netmgrd.qos.enable=true \
+    persist.vendor.data.mode=concurrent
+
+# system property for maximum number of HFP client connections
+PRODUCT_PROPERTY_OVERRIDES += \
+    bt.max.hfpclient.connections=1
+
+#
+# System props for telephony
+# System prop to turn on CdmaLTEPhone always
+PRODUCT_PROPERTY_OVERRIDES += \
+    telephony.lteOnCdmaDevice=1
+
+#Simulate sdcard on /data/media
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.fuse_sdcard=true
+
+#system prop for RmNet Data
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.rmnet.data.enable=true \
+    persist.data.wda.enable=true \
+    persist.data.df.dl_mode=5 \
+    persist.data.df.ul_mode=5 \
     persist.data.df.agg.dl_pkt=10 \
     persist.data.df.agg.dl_size=4096 \
     persist.data.df.dev_name=rmnet_usb0 \
