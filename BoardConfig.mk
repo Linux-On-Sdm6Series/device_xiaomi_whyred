@@ -4,7 +4,7 @@
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
+ # You may obtain a copy of the License at
 #
 #      http://www.apache.org/licenses/LICENSE-2.0
 #
@@ -144,6 +144,9 @@ include device/qcom/sepolicy/sepolicy.mk
 ENABLE_VENDOR_RIL_SERVICE := true
 # TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 TARGET_RIL_VARIANT := caf
+
+# Security patch level
+VENDOR_SECURITY_PATCH := 2018-12-01
 
 # QCOM TIME SERVICES
 BOARD_USES_QC_TIME_SERVICES := true
