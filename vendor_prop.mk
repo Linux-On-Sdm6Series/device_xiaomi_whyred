@@ -1,4 +1,4 @@
-# vendor props
+ # vendor props
 PRODUCT_PROPERTY_OVERRIDES += \
     DEVICE_PROVISIONED=1 \
     af.fast_track_multiplier=1 \
@@ -183,7 +183,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.offload.multiple.enabled=false \
     vendor.audio.offload.passthrough=false \
     vendor.audio.offload.pstimeout.secs=3 \
-    vendor.audio.offload.track.enable=true \
+    vendor.audio.offload.track.enable=false \
     vendor.audio.parser.ip.buffer.size=262144 \
     vendor.audio.safx.pbe.enabled=true \
     vendor.audio.tunnel.encode=false \
