@@ -298,7 +298,8 @@ PRODUCT_PACKAGES += \
     init.qti.ims.sh \
     init.qti.qseecomd.sh \
     ueventd.rc \
-    init.halium.rc
+    init.halium.rc \
+    init.disabled.rc
 
 # RCS
 PRODUCT_PACKAGES += \
