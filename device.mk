@@ -397,6 +397,10 @@ PRODUCT_PACKAGES += \
 
 #=========== Ubuntu Touch / Halium ============#
 
+# SPL fix
+PRODUCT_PACKAGES += \
+    getSPL
+
 # Misc
 PRODUCT_PACKAGES += \
     libandroid \
