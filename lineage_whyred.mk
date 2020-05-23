@@ -21,21 +21,24 @@ $(call inherit-product, build/target/product/embedded.mk)
 
 # Inherit from our custom product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
-$(call inherit-product, vendor/aosp/product/common.mk)
+# $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+# $(call inherit-product, vendor/lineage/product/common.mk)
 
 # Inherit from whyred device
 $(call inherit-product, device/xiaomi/whyred/device.mk)
 
+# Inherit some common Halium stuff.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/halium.mk)
+
 ## Device identifier. This must come after all inclusions
-PRODUCT_NAME := aosp_whyred
+PRODUCT_NAME := lineage_whyred
 PRODUCT_DEVICE := whyred
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi Note 5 Pro
 PRODUCT_FULL_TREBLE_OVERRIDE := true
 
-TARGET_BOOT_ANIMATION_RES := 1080
+# TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_VENDOR_PRODUCT_NAME := whyred
 TARGET_VENDOR_DEVICE_NAME := whyred
 PRODUCT_BUILD_PROP_OVERRIDES += TARGET_DEVICE=whyred PRODUCT_NAME=whyred

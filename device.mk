@@ -107,12 +107,12 @@ PRODUCT_COPY_FILES += \
     $(TOPDIR)frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:/$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
 
 # ANT+
-PRODUCT_PACKAGES += \
-    AntHalService \
-    com.dsi.ant.antradio_library
+# PRODUCT_PACKAGES += \
+#     AntHalService \
+#     com.dsi.ant.antradio_library
 
-PRODUCT_COPY_FILES += \
-    external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.dsi.ant.antradio_library.xml
+# PRODUCT_COPY_FILES += \
+#     external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.dsi.ant.antradio_library.xml
 
 # Display
 PRODUCT_PACKAGES += \
@@ -125,6 +125,7 @@ PRODUCT_PACKAGES += \
     libhwc2on1apadapter \
     libqdMetaData.system \
     libtinyxml
+
 # Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
@@ -157,23 +158,23 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp/mediaextractor.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediaextractor.policy
 
 # Doze
-#PRODUCT_PACKAGES += \
-#    XiaomiDoze
+# PRODUCT_PACKAGES += \
+#     XiaomiDoze
 
 # Wifi
 PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml \
-    libqsap_sdk \
+#     libqsap_sdk \
     libQWiFiSoftApCfg \
     libwpa_client \
-    hostapd \
+#     hostapd \
     dhcpcd.conf \
     wificond \
     libwifi-hal-qcom \
-    libcld80211 \
-    wpa_supplicant \
-    wpa_supplicant.conf
+    libcld80211
+#     wpa_supplicant \
+#     wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/hostapd.accept:$(TARGET_COPY_OUT_VENDOR)/etc/hostapd/hostapd.accept \
@@ -187,12 +188,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     librmnetctl \
     libxml2 \
-    libprotobuf-cpp-full \
-    telephony-ext \
-    ims-ext-common
+    libprotobuf-cpp-full
+#     telephony-ext \
+#     ims-ext-common
 
-PRODUCT_BOOT_JARS += \
-    telephony-ext
+# PRODUCT_BOOT_JARS += \
+#     telephony-ext
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -240,7 +241,7 @@ PRODUCT_PACKAGES += \
     libandroid_net \
     netutils-wrapper-1.0
 
-#FM
+# FM
 PRODUCT_PACKAGES += \
     FM2 \
     libqcomfm_jni \
@@ -282,8 +283,8 @@ PRODUCT_PACKAGES += \
     rcs_service_api.xml
 
 # Camera
-PRODUCT_PACKAGES += \
-    Snap
+# PRODUCT_PACKAGES += \
+#     Snap
 
 # IPv6
 PRODUCT_PACKAGES += \
@@ -310,8 +311,8 @@ PRODUCT_PACKAGES += \
     services-ext
 
 # Healthd
-PRODUCT_PACKAGES += \
-    chargeonlymode
+# PRODUCT_PACKAGES += \
+#     chargeonlymode
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -324,10 +325,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vndk-sp
 
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v27/arm64/arch-arm64-armv8-a/shared/vndk-core/android.hardware.gnss@1.0.so:system/lib64/android.hardware.gnss@1.0-v27.so \
-    prebuilts/vndk/v27/arm64/arch-arm64-armv8-a/shared/vndk-core/android.frameworks.sensorservice@1.0.so:system/lib64/android.frameworks.sensorservice@1.0-v27.so \
-    prebuilts/vndk/v27/arm/arch-arm-armv7-a-neon/shared/vndk-core/android.frameworks.sensorservice@1.0.so:system/lib/android.frameworks.sensorservice@1.0-v27.so
+# PRODUCT_COPY_FILES += \
+#     prebuilts/vndk/v27/arm64/arch-arm64-armv8-a/shared/vndk-core/android.hardware.gnss@1.0.so:system/lib64/android.hardware.gnss@1.0-v27.so \
+#     prebuilts/vndk/v27/arm64/arch-arm64-armv8-a/shared/vndk-core/android.frameworks.sensorservice@1.0.so:system/lib64/android.frameworks.sensorservice@1.0-v27.so \
+#     prebuilts/vndk/v27/arm/arch-arm-armv7-a-neon/shared/vndk-core/android.frameworks.sensorservice@1.0.so:system/lib/android.frameworks.sensorservice@1.0-v27.so
 
 # Bluetooth
 PRODUCT_PACKAGES += \

@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2018 The LineageOS Project
+# Copyright (C) 2020 Dreemurrs Embedded Labs
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -22,6 +23,7 @@ BOARD_VENDOR := xiaomi
 TARGET_BOOTLOADER_BOARD_NAME := sdm636
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno509
 TARGET_NO_BOOTLOADER := true
+TARGET_NO_RECOVERY := true
 TARGET_BOARD_PLATFORM := sdm660
 
 # Architecture
@@ -41,7 +43,8 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 BOARD_USES_QCOM_HARDWARE := true
 
 # Kernel
-BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive console=ttyMSM0,115200,n8 androidboot.console=ttyMSM0 earlycon=msm_serial_dm,0xc170000 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1 service_locator.enable=1 swiotlb=1 androidboot.configfs=true androidboot.usbcontroller=a800000.dwc3
+BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive console=tty0 androidboot.console=ttyMSM0 earlycon=msm_serial_dm,0xc170000 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1 service_locator.enable=1 swiotlb=1 androidboot.configfs=true androidboot.usbcontroller=a800000.dwc3
+BOARD_KERNEL_CMDLINE += selinux=0 # console=ttyMSM0,115200,n8
 BOARD_KERNEL_BASE        := 0x00000000
 BOARD_KERNEL_PAGESIZE    := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
@@ -50,12 +53,13 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/xiaomi/whyred
-TARGET_KERNEL_CONFIG := whyred_defconfig
+TARGET_KERNEL_CONFIG := whyred-perf_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
-#TARGET_KERNEL_CLANG_COMPILE := true
+# TARGET_KERNEL_CLANG_COMPILE := true
 
 
 # Partitions
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
 BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456
@@ -69,7 +73,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_USES_VENDORIMAGE := true
 TARGET_COPY_OUT_VENDOR := vendor
 
-#Exfat
+# Exfat
 TARGET_EXFAT_DRIVER := sdfat
 
 # Audio
@@ -77,7 +81,7 @@ BOARD_USES_ALSA_AUDIO := true
 
 BOARD_USES_SRS_TRUEMEDIA := false
 BOARD_SUPPORTS_SOUND_TRIGGER := true
-BOARD_SUPPORTS_QAHW := true
+# BOARD_SUPPORTS_QAHW := true
 
 AUDIO_FEATURE_ENABLED_COMPRESS_CAPTURE := false
 AUDIO_FEATURE_ENABLED_COMPRESS_VOIP := true
@@ -187,8 +191,8 @@ WIFI_DRIVER_OPERSTATE_PATH := "/sys/class/net/wlan0/operstate"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # SELinux
-#include device/qcom/sepolicy/sepolicy.mk
-#BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
+include device/qcom/sepolicy/sepolicy.mk
+# BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 
 # RIL
 PROTOBUF_SUPPORTED := true
