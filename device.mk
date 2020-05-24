@@ -193,7 +193,7 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0 \
     android.hardware.radio.deprecated@1.0-impl \
     android.hardware.radio.deprecated@1.0-service \
-    libprotobuf-cpp-full
+    libprotobuf-cpp-full \
     librmnetctl \
     libxml2 \
 #     telephony-ext \
