@@ -16,7 +16,7 @@
 #
 
 # Board device path
-DEVICE_PATH := device/xiaomi/whyred
+DEVICE_PATH := device/halium/whyred
 
 BOARD_VENDOR := xiaomi
 
@@ -74,6 +74,7 @@ BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_USES_VENDORIMAGE := true
 TARGET_COPY_OUT_VENDOR := vendor
+TARGET_COPY_OUT_SYSTEM := system
 
 # Exfat
 TARGET_EXFAT_DRIVER := sdfat
@@ -261,4 +262,4 @@ TARGET_BOOTANIMATION_TEXTURE_CACHE := true
 TARGET_USES_MKE2FS := true
 
 # Inherit from proprietary files
-include vendor/xiaomi/whyred/BoardConfigVendor.mk
+include vendor/halium/whyred/BoardConfigVendor.mk
