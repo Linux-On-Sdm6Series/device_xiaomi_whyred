@@ -202,12 +202,35 @@ LOCAL_SRC_FILES    := bin/init.goodix.sh
 OCAL_VENDOR_MODULE := true
 include $(BUILD_PREBUILT)
 
+# include $(CLEAR_VARS)
+# LOCAL_MODULE          := chargeonlymode
+# LOCAL_MODULE_OWNER    := xiaomi
+# LOCAL_MODULE_PATH     := $(TARGET_ROOT_OUT_SBIN)
+# LOCAL_UNSTRIPPED_PATH := $(TARGET_ROOT_OUT_SBIN_UNSTRIPPED)
+# LOCAL_SRC_FILES       := sbin/chargeonlymode
+# LOCAL_MODULE_TAGS     := optional
+# LOCAL_MODULE_CLASS    := EXECUTABLES
+# include $(BUILD_PREBUILT)
+
 include $(CLEAR_VARS)
-LOCAL_MODULE          := chargeonlymode
-LOCAL_MODULE_OWNER    := xiaomi
-LOCAL_MODULE_PATH     := $(TARGET_ROOT_OUT_SBIN)
-LOCAL_UNSTRIPPED_PATH := $(TARGET_ROOT_OUT_SBIN_UNSTRIPPED)
-LOCAL_SRC_FILES       := sbin/chargeonlymode
-LOCAL_MODULE_TAGS     := optional
-LOCAL_MODULE_CLASS    := EXECUTABLES
+LOCAL_MODULE       := init.halium.rc
+LOCAL_MODULE_TAGS  := optional eng
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := root/init.halium.rc
+LOCAL_MODULE_PATH  := $(TARGET_OUT_SYSTEM)/etc/init
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE       := init.vndk-26.rc
+LOCAL_MODULE_TAGS  := optional eng
+LOCAL_MODULE_CLASS := ETC
+LOCAL_SRC_FILES    := root/init.vndk-26.rc
+LOCAL_MODULE_PATH  := $(TARGET_OUT_SYSTEM)/etc/init
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE       := vndk-detect
+LOCAL_MODULE_TAGS  := optional eng
+LOCAL_MODULE_CLASS := EXECUTABLES
+LOCAL_SRC_FILES    := $(TARGET_OUT_SYSTEM)/bin/vndk-detect
 include $(BUILD_PREBUILT)

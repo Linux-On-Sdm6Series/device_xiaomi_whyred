@@ -297,7 +297,8 @@ PRODUCT_PACKAGES += \
     init.qti.fm.sh \
     init.qti.ims.sh \
     init.qti.qseecomd.sh \
-    ueventd.rc
+    ueventd.rc \
+    init.halium.rc
 
 # RCS
 PRODUCT_PACKAGES += \
@@ -342,13 +343,28 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.base@1.0_system \
-    android.hidl.manager@1.0 \
-    android.hidl.manager@1.0-java
+    android.hidl.manager@1.0
+#     android.hidl.manager@1.0-java
 
-# VNDK-SP:
+# VNDK
 PRODUCT_PACKAGES += \
     vndk-sp \
-    vndk-core
+    vndk-core \
+    vndk-detect
+
+PRODUCT_PACKAGES += \
+    init.vndk-26.rc \
+    ld.config.27.txt \
+    llndk.libraries.27.txt \
+    vndksp.libraries.27.txt
+
+PRODUCT_PACKAGES += \
+    ld.config.vndk_lite.txt
+
+PRODUCT_COPY_FILES += \
+#     build/make/target/product/vndk/init.gsi.rc:system/etc/init/init.gsi.rc \
+    build/make/target/product/vndk/init.vndk-27.rc:system/etc/init/init.vndk-27.rc \
+    $(LOCAL_PATH)/configs/ld.config.26.txt:system/etc/ld.config.26.txt
 
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v27/arm64/arch-arm64-armv8-a/shared/vndk-core/android.hardware.gnss@1.0.so:system/lib64/android.hardware.gnss@1.0-v27.so \
