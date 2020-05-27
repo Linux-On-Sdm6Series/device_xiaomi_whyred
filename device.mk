@@ -77,7 +77,7 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Audio
 PRODUCT_PACKAGES += \
-#    audiod \
+    audiod \
     audio.a2dp.default \
     audio.primary.sdm660 \
     audio.r_submix.default \
