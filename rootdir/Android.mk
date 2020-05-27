@@ -217,7 +217,7 @@ LOCAL_MODULE       := init.halium.rc
 LOCAL_MODULE_TAGS  := optional eng
 LOCAL_MODULE_CLASS := ETC
 LOCAL_SRC_FILES    := root/init.halium.rc
-LOCAL_MODULE_PATH  := $(TARGET_OUT_SYSTEM)/etc/init
+LOCAL_MODULE_PATH  := etc/init
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
@@ -225,12 +225,12 @@ LOCAL_MODULE       := init.vndk-26.rc
 LOCAL_MODULE_TAGS  := optional eng
 LOCAL_MODULE_CLASS := ETC
 LOCAL_SRC_FILES    := root/init.vndk-26.rc
-LOCAL_MODULE_PATH  := $(TARGET_OUT_SYSTEM)/etc/init
+LOCAL_MODULE_PATH  := etc/init
 include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE       := vndk-detect
 LOCAL_MODULE_TAGS  := optional eng
 LOCAL_MODULE_CLASS := EXECUTABLES
-LOCAL_SRC_FILES    := $(TARGET_OUT_SYSTEM)/bin/vndk-detect
+LOCAL_SRC_FILES    := bin/vndk-detect
 include $(BUILD_PREBUILT)
