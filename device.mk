@@ -297,7 +297,7 @@ PRODUCT_PACKAGES += \
     init.qcom.syspart_fixup.sh \
     init.qcom.usb.sh \
     init.qcom.wifi.sh \
-    init.qti.fm.sh \
+#     init.qti.fm.sh \
     init.qti.ims.sh \
     init.qti.qseecomd.sh \
     ueventd.rc \

@@ -170,13 +170,13 @@ LOCAL_SRC_FILES    := bin/init.qcom.wifi.sh
 LOCAL_VENDOR_MODULE := true
 include $(BUILD_PREBUILT)
 
-include $(CLEAR_VARS)
-LOCAL_MODULE       := init.qti.fm.sh
-LOCAL_MODULE_TAGS  := optional eng
-LOCAL_MODULE_CLASS := EXECUTABLES
-LOCAL_SRC_FILES    := bin/init.qti.fm.sh
-LOCAL_VENDOR_MODULE := true
-include $(BUILD_PREBUILT)
+# include $(CLEAR_VARS)
+# LOCAL_MODULE       := init.qti.fm.sh
+# LOCAL_MODULE_TAGS  := optional eng
+# LOCAL_MODULE_CLASS := EXECUTABLES
+# LOCAL_SRC_FILES    := bin/init.qti.fm.sh
+# LOCAL_VENDOR_MODULE := true
+# include $(BUILD_PREBUILT)
 
 include $(CLEAR_VARS)
 LOCAL_MODULE       := init.qti.ims.sh
