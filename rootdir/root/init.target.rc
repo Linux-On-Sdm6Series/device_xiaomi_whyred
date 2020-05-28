@@ -231,6 +231,7 @@ service audiod /system/vendor/bin/audiod
    class late_start
    user system
    group system
+   disabled
 #
 #service usf_tester /system/vendor/bin/usf_tester
 #    user system
