@@ -27,8 +27,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 # Inherit from whyred device
 $(call inherit-product, device/halium/whyred/device.mk)
 
-# Inherit from phh vndk vendor.
-# $(call inherit-product, vendor/vndk/vndk.mk)
+# Inherit fonts
+$(call inherit-product-if-exists, frameworks/base/data/fonts/fonts.mk)
 
 # Inherit some common Halium stuff.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/halium.mk)

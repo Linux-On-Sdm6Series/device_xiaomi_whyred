@@ -273,6 +273,10 @@ PRODUCT_PACKAGES += \
     libandroid_net \
     netutils-wrapper-1.0
 
+# Netd
+PRODUCT_PACKAGES += \
+    android.system.net.netd@1.1-service.stub
+
 # FM
 PRODUCT_PACKAGES += \
     FM2 \
@@ -307,7 +311,8 @@ PRODUCT_PACKAGES += \
     init.qti.qseecomd.sh \
     ueventd.rc \
     init.halium.rc \
-    init.disabled.rc
+    init.disabled.rc \
+    on-post-data.sh
 
 # RCS
 PRODUCT_PACKAGES += \
@@ -318,7 +323,7 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.frameworks.displayservice@1.0_32 \
+    android.frameworks.displayservice@1.0 \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
     libbinder_vendor
@@ -396,6 +401,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libandroid \
     libandroid_runtime \
+    libdrm \
+    vendor.display.config@1.7 \
     libion
 
 # Media
