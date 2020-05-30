@@ -371,6 +371,9 @@ PRODUCT_PACKAGES += \
     vndk-detect
 
 PRODUCT_PACKAGES += \
+    vndk_v27_arm64
+
+PRODUCT_PACKAGES += \
     init.vndk-26.rc \
     ld.config.27.txt \
     llndk.libraries.27.txt \
