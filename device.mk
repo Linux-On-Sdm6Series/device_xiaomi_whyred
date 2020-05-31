@@ -400,6 +400,11 @@ PRODUCT_PACKAGES += \
 
 #=========== Ubuntu Touch / Halium ============#
 
+# Ubuntu Touch UDEV
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/ubuntu/70-whyred.rules:system/halium/lib/udev/rules.d/70-whyred.rules \
+    $(LOCAL_PATH)/ubuntu/display.conf:system/ubuntu/etc/ubuntu-touch-session.d/android.conf
+
 # SPL fix
 PRODUCT_PACKAGES += \
     getSPL
