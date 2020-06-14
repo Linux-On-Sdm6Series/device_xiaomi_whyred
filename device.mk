@@ -379,9 +379,9 @@ PRODUCT_PACKAGES += \
     vndk-detect
 
 PRODUCT_COPY_FILES += \
-	device/halium/whyred/vndk/vndk.rc:system/etc/init/vndk.rc \
-	device/halium/whyred/vndk/ld.config.26.txt:system/etc/ld.config.26.txt \
-	device/halium/whyred/vndk/ld.config.27.txt:system/etc/ld.config.27.txt
+    device/halium/whyred/vndk/vndk.rc:system/etc/init/vndk.rc \
+    device/halium/whyred/vndk/ld.config.26.txt:system/etc/ld.config.26.txt \
+    device/halium/whyred/vndk/ld.config.27.txt:system/etc/ld.config.27.txt
 
 PRODUCT_PACKAGES += \
     vndk_package
