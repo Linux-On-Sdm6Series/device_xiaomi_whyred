@@ -46,5 +46,8 @@ write_headers "whyred"
 # The standard common blobs
 write_makefiles "$MY_DIR"/proprietary-files.txt 1
 
+# VNDK compat layer
+write_makefiles "$MY_DIR"/vndk/proprietary-files-vndk.txt true
+
 # Finish
 write_footers

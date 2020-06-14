@@ -378,11 +378,24 @@ PRODUCT_PACKAGES += \
     vndk-core \
     vndk-detect
 
+PRODUCT_COPY_FILES += \
+	device/halium/whyred/vndk/vndk.rc:system/etc/init/vndk.rc \
+	device/halium/whyred/vndk/ld.config.26.txt:system/etc/ld.config.26.txt \
+	device/halium/whyred/vndk/ld.config.27.txt:system/etc/ld.config.27.txt
+
+PRODUCT_PACKAGES += \
+    vndk_package
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/vndk/ld.config.compat.txt:system/etc/ld.config.compat.txt \
+    $(LOCAL_PATH)/vndk/vndk-compat.rc:system/etc/init/vndk-compat.rc
+
 PRODUCT_PACKAGES += \
     vndk_v27_arm64
 
 PRODUCT_PACKAGES += \
     init.vndk-26.rc \
+    ld.config.26.txt \
     ld.config.27.txt \
     llndk.libraries.27.txt \
     vndksp.libraries.27.txt

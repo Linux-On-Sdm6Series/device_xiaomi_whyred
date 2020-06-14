@@ -1,0 +1,8 @@
+on post-fs
+    export LD_CONFIG_FILE /system/etc/ld.config.compat.txt
+
+on post-fs
+    export LD_CONFIG_FILE /system/etc/ld.config.26.txt
+
+on post-fs
+    export LD_CONFIG_FILE /system/etc/ld.config.27.txt
