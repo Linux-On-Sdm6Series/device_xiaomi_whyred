@@ -654,7 +654,7 @@ vendor/lib/sensors.ssc.so
 
 # Thermal
 vendor/bin/msm_irqbalance
-vendor/bin/thermal-engine
+# vendor/bin/thermal-engine
 -vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
 vendor/lib64/libthermalfeature.so

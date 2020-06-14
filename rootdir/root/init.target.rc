@@ -188,14 +188,14 @@ service qseecomd /vendor/bin/qseecomd
 #   group systemcu
 #   disabled
 #
-service thermal-engine /system/vendor/bin/thermal-engine
-   class main
-   user root
-   socket thermal-send-client stream 0666 system system
-   socket thermal-recv-client stream 0660 system system
-   socket thermal-recv-passive-client stream 0666 system system
-   socket thermal-send-rule stream 0660 system system
-   group root
+# service thermal-engine /system/vendor/bin/thermal-engine
+#    class main
+#    user root
+#    socket thermal-send-client stream 0666 system system
+#    socket thermal-recv-client stream 0660 system system
+#    socket thermal-recv-passive-client stream 0666 system system
+#    socket thermal-send-rule stream 0660 system system
+#    group root
 
 #service security-check1 /sbin/security_boot_check system
 #    class core
@@ -432,8 +432,8 @@ on charger
     start qcom-post-boot
     start hvdcp_opti
     setprop sys.usb.configfs 1
-    start power_off_alarm
-    start thermal-engine
+#     start power_off_alarm
+#     start thermal-engine
 
 #
 #service nqs /system/bin/nqs
