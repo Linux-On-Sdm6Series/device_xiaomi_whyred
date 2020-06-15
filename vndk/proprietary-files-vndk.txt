@@ -160,8 +160,8 @@ lib64/libusbhost.so:lib64/vndk-compat/libusbhost.so
 lib64/libutils.so:lib64/vndk-compat/libutils.so
 lib64/libvicom_recon.so:lib64/vndk-compat/libvicom_recon.so
 lib64/libvintf.so:lib64/vndk-compat/libvintf.so
-lib64/libvixl-arm64.so:lib64/vndk-compat/libvixl-arm64.so
-lib64/libvixl-arm.so:lib64/vndk-compat/libvixl-arm.so
+# lib64/libvixl-arm64.so:lib64/vndk-compat/libvixl-arm64.so
+# lib64/libvixl-arm.so:lib64/vndk-compat/libvixl-arm.so
 lib64/libvorbisidec.so:lib64/vndk-compat/libvorbisidec.so
 lib64/libwifi-service.so:lib64/vndk-compat/libwifi-service.so
 lib64/libwifi-system.so:lib64/vndk-compat/libwifi-system.so
@@ -353,7 +353,7 @@ lib64/vndk-sp/libhardware.so:lib64/vndk-sp-compat/libhardware.so
 lib64/vndk-sp/libhidlbase.so:lib64/vndk-sp-compat/libhidlbase.so
 lib64/vndk-sp/libhidlmemory.so:lib64/vndk-sp-compat/libhidlmemory.so
 lib64/vndk-sp/libhidltransport.so:lib64/vndk-sp-compat/libhidltransport.so
-lib64/vndk-sp/libhwbinder.so:lib64/vndk-sp-compat/libhwbinder.so
+# lib64/vndk-sp/libhwbinder.so:lib64/vndk-sp-compat/libhwbinder.so
 lib64/vndk-sp/libion.so:lib64/vndk-sp-compat/libion.so
 lib64/vndk-sp/liblzma.so:lib64/vndk-sp-compat/liblzma.so
 lib64/vndk-sp/libpng.so:lib64/vndk-sp-compat/libpng.so
@@ -380,7 +380,7 @@ lib/vndk-sp/libhardware.so:lib/vndk-sp-compat/libhardware.so
 lib/vndk-sp/libhidlbase.so:lib/vndk-sp-compat/libhidlbase.so
 lib/vndk-sp/libhidlmemory.so:lib/vndk-sp-compat/libhidlmemory.so
 lib/vndk-sp/libhidltransport.so:lib/vndk-sp-compat/libhidltransport.so
-lib/vndk-sp/libhwbinder.so:lib/vndk-sp-compat/libhwbinder.so
+# lib/vndk-sp/libhwbinder.so:lib/vndk-sp-compat/libhwbinder.so
 lib/vndk-sp/libion.so:lib/vndk-sp-compat/libion.so
 lib/vndk-sp/liblzma.so:lib/vndk-sp-compat/liblzma.so
 lib/vndk-sp/libpng.so:lib/vndk-sp-compat/libpng.so
