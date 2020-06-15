@@ -34,7 +34,7 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/vndk-26-arm32/android.hardware.keymaster@3.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vndk-26/android.hardware.keymaster@3.0.so \
 	$(LOCAL_PATH)/vndk-26-arm32/android.hardware.light@2.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vndk-26/android.hardware.light@2.0.so \
 	$(LOCAL_PATH)/vndk-26-arm32/android.hardware.media@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vndk-26/android.hardware.media@1.0.so \
-	$(LOCAL_PATH)/vndk-26-arm32/android.hardware.media.omx@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vndk-26/android.hardware.media.omx@1.0.so \
+# 	$(LOCAL_PATH)/vndk-26-arm32/android.hardware.media.omx@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vndk-26/android.hardware.media.omx@1.0.so \
 	$(LOCAL_PATH)/vndk-26-arm32/android.hardware.memtrack@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vndk-26/android.hardware.memtrack@1.0.so \
 	$(LOCAL_PATH)/vndk-26-arm32/android.hardware.nfc@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vndk-26/android.hardware.nfc@1.0.so \
 	$(LOCAL_PATH)/vndk-26-arm32/android.hardware.power@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vndk-26/android.hardware.power@1.0.so \
@@ -151,7 +151,7 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/vndk-26-arm32/libstagefright_amrnb_common.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vndk-26/libstagefright_amrnb_common.so \
 	$(LOCAL_PATH)/vndk-26-arm32/libstagefright_enc_common.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vndk-26/libstagefright_enc_common.so \
 	$(LOCAL_PATH)/vndk-26-arm32/libstagefright_foundation.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vndk-26/libstagefright_foundation.so \
-	$(LOCAL_PATH)/vndk-26-arm32/libstagefright_omx.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vndk-26/libstagefright_omx.so \
+# 	$(LOCAL_PATH)/vndk-26-arm32/libstagefright_omx.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vndk-26/libstagefright_omx.so \
 	$(LOCAL_PATH)/vndk-26-arm32/libstagefright.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vndk-26/libstagefright.so \
 	$(LOCAL_PATH)/vndk-26-arm32/libstagefright_soft_aacdec.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vndk-26/libstagefright_soft_aacdec.so \
 	$(LOCAL_PATH)/vndk-26-arm32/libstagefright_soft_aacenc.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vndk-26/libstagefright_soft_aacenc.so \
@@ -310,7 +310,7 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/vndk-26-arm64/android.hardware.keymaster@3.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vndk-26/android.hardware.keymaster@3.0.so \
 	$(LOCAL_PATH)/vndk-26-arm64/android.hardware.light@2.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vndk-26/android.hardware.light@2.0.so \
 	$(LOCAL_PATH)/vndk-26-arm64/android.hardware.media@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vndk-26/android.hardware.media@1.0.so \
-	$(LOCAL_PATH)/vndk-26-arm64/android.hardware.media.omx@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vndk-26/android.hardware.media.omx@1.0.so \
+# 	$(LOCAL_PATH)/vndk-26-arm64/android.hardware.media.omx@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vndk-26/android.hardware.media.omx@1.0.so \
 	$(LOCAL_PATH)/vndk-26-arm64/android.hardware.memtrack@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vndk-26/android.hardware.memtrack@1.0.so \
 	$(LOCAL_PATH)/vndk-26-arm64/android.hardware.nfc@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vndk-26/android.hardware.nfc@1.0.so \
 	$(LOCAL_PATH)/vndk-26-arm64/android.hardware.power@1.0.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vndk-26/android.hardware.power@1.0.so \
@@ -426,7 +426,7 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/vndk-26-arm64/libstagefright_amrnb_common.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vndk-26/libstagefright_amrnb_common.so \
 	$(LOCAL_PATH)/vndk-26-arm64/libstagefright_enc_common.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vndk-26/libstagefright_enc_common.so \
 	$(LOCAL_PATH)/vndk-26-arm64/libstagefright_foundation.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vndk-26/libstagefright_foundation.so \
-	$(LOCAL_PATH)/vndk-26-arm64/libstagefright_omx.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vndk-26/libstagefright_omx.so \
+# 	$(LOCAL_PATH)/vndk-26-arm64/libstagefright_omx.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vndk-26/libstagefright_omx.so \
 	$(LOCAL_PATH)/vndk-26-arm64/libstagefright.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vndk-26/libstagefright.so \
 	$(LOCAL_PATH)/vndk-26-arm64/libstagefright_soft_aacdec.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vndk-26/libstagefright_soft_aacdec.so \
 	$(LOCAL_PATH)/vndk-26-arm64/libstagefright_soft_aacenc.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vndk-26/libstagefright_soft_aacenc.so \
