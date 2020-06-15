@@ -391,7 +391,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/vndk/vndk-compat.rc:system/etc/init/vndk-compat.rc
 
 PRODUCT_PACKAGES += \
-    vndk_v27_arm64
+    vndk_v27_arm64 \
+    vndk_v27_arm32 \
+    vndk_v26_arm64 \
+    vndk_v26_arm32
 
 PRODUCT_PACKAGES += \
     init.vndk-26.rc \
@@ -404,9 +407,8 @@ PRODUCT_PACKAGES += \
     ld.config.vndk_lite.txt
 
 PRODUCT_COPY_FILES += \
-#     build/make/target/product/vndk/init.gsi.rc:system/etc/init/init.gsi.rc \
     build/make/target/product/vndk/init.vndk-27.rc:system/etc/init/init.vndk-27.rc \
-    $(LOCAL_PATH)/configs/ld.config.26.txt:system/etc/ld.config.26.txt
+    build/make/target/product/vndk/init.gsi.rc:system/etc/init/init.gsi.rc
 
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v27/arm64/arch-arm64-armv8-a/shared/vndk-core/android.hardware.gnss@1.0.so:system/lib64/android.hardware.gnss@1.0-v27.so \
