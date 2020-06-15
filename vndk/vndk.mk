@@ -550,5 +550,5 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/vndk-27-arm64/libstdc++.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vndk-27/libstdc++.so \
 	$(LOCAL_PATH)/vndk-27-arm64/libvintf.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vndk-27/libvintf.so \
 	$(LOCAL_PATH)/vndk-27-arm64/libvulkan.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vndk-27/libvulkan.so \
-	$(LOCAL_PATH)/vndk/vndk-26-arm32-binder32/libbinder.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vndk-26/libbinder.so
+	$(LOCAL_PATH)/vndk/vndk-26-arm32-binder32/libbinder.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vndk-26/libbinder.so \
         $(LOCAL_PATH)/vndk/vndk-26-arm32-binder32/libhwbinder.so:$(TARGET_COPY_OUT_SYSTEM)/lib/vndk-sp-26/libhwbinder.so
