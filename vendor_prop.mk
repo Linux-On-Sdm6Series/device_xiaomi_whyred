@@ -1,5 +1,6 @@
  # vendor props
 PRODUCT_PROPERTY_OVERRIDES += \
+    persist.media.treble_omx=false \
     persist.sys.job_delay=true \
     persist.sys.mcd_config_file=/system/etc/mcd_default.conf \
     persist.sys.perf.debug=true \
