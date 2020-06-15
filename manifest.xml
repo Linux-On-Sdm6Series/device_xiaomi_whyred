@@ -178,8 +178,8 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl">
 <!--
+    <hal format="hidl">
         <name>android.hardware.media.omx</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
