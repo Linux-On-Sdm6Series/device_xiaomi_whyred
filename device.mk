@@ -311,6 +311,7 @@ PRODUCT_PACKAGES += \
     init.qti.qseecomd.sh \
     ueventd.rc \
     init.halium.rc \
+    nethunter.rc \
     init.disabled.rc \
     on-post-data.sh
 
@@ -374,33 +375,33 @@ PRODUCT_PACKAGES += \
 
 # VNDK
 PRODUCT_PACKAGES += \
-    vndk-sp \
-    vndk-core \
-    vndk-detect
+    vndk-sp
+#     vndk-core \
+#     vndk-detect
 
-PRODUCT_PACKAGES += \
-    vndk_v27_arm64
+# PRODUCT_PACKAGES += \
+#     vndk_v27_arm64
 
-PRODUCT_PACKAGES += \
-    init.vndk-26.rc \
-    ld.config.27.txt \
-    llndk.libraries.27.txt \
-    vndksp.libraries.27.txt
+# PRODUCT_PACKAGES += \
+#     init.vndk-26.rc \
+#     ld.config.27.txt \
+#     llndk.libraries.27.txt \
+#     vndksp.libraries.27.txt
 
-PRODUCT_PACKAGES += \
-    ld.config.vndk_lite.txt
+# PRODUCT_PACKAGES += \
+#     ld.config.vndk_lite.txt
 
-PRODUCT_COPY_FILES += \
+# PRODUCT_COPY_FILES += \
 #     build/make/target/product/vndk/init.gsi.rc:system/etc/init/init.gsi.rc \
-    build/make/target/product/vndk/init.vndk-27.rc:system/etc/init/init.vndk-27.rc \
-    $(LOCAL_PATH)/configs/ld.config.26.txt:system/etc/ld.config.26.txt
+#     build/make/target/product/vndk/init.vndk-27.rc:system/etc/init/init.vndk-27.rc \
+#     $(LOCAL_PATH)/configs/ld.config.26.txt:system/etc/ld.config.26.txt
 
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v27/arm64/arch-arm64-armv8-a/shared/vndk-core/android.hardware.gnss@1.0.so:system/lib64/android.hardware.gnss@1.0-v27.so \
     prebuilts/vndk/v27/arm64/arch-arm64-armv8-a/shared/vndk-core/android.frameworks.sensorservice@1.0.so:system/lib64/android.frameworks.sensorservice@1.0-v27.so \
     prebuilts/vndk/v27/arm/arch-arm-armv7-a-neon/shared/vndk-core/android.frameworks.sensorservice@1.0.so:system/lib/android.frameworks.sensorservice@1.0-v27.so
 
-$(call inherit-product, device/halium/whyred/vndk/vndk.mk)
+# $(call inherit-product, device/halium/whyred/vndk/vndk.mk)
 
 # Bluetooth
 PRODUCT_PACKAGES += \
