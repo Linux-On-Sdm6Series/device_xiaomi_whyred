@@ -97,12 +97,12 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio@2.0-impl \
-    android.hardware.audio@2.0-service \
-    android.hardware.audio.effect@2.0-impl \
-    android.hardware.audio.effect@2.0-service \
-    android.hardware.soundtrigger@2.0-impl \
-    android.hardware.soundtrigger@2.0-service \
+    android.hardware.audio@2.0-impl:32 \
+    android.hardware.audio@2.0-service:32 \
+    android.hardware.audio.effect@2.0-impl:32 \
+    android.hardware.audio.effect@2.0-service:32 \
+    android.hardware.soundtrigger@2.0-impl:32 \
+    android.hardware.soundtrigger@2.0-service:32 \
     audio.a2dp.default \
     audio.primary.sdm660 \
     audio.r_submix.default \
@@ -196,11 +196,11 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.2 \
     android.hardware.radio.config@1.0 \
     android.hardware.secure_element@1.0 \
-    android.hardware.radio@1.0-impl \
-    android.hardware.radio@1.0-service \
+    android.hardware.radio@1.0-impl:32 \
+    android.hardware.radio@1.0-service:32 \
     android.hardware.radio.deprecated@1.0 \
-    android.hardware.radio.deprecated@1.0-impl \
-    android.hardware.radio.deprecated@1.0-service \
+    android.hardware.radio.deprecated@1.0-impl:32 \
+    android.hardware.radio.deprecated@1.0-service:32 \
     librmnetctl \
     libxml2 \
     libprotobuf-cpp-full
@@ -326,16 +326,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libbson \
     libgui_vendor \
-    camera.device@1.0-impl \
-    camera.device@3.2-impl \
+    camera.device@1.0-impl:32 \
+    camera.device@3.2-impl:32 \
     android.frameworks.displayservice@1.0 \
     android.hardware.camera.provider@2.4-impl:32 \
-    android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service:32 \
-    android.hardware.camera.provider@2.4-service \
     libbinder_vendor \
-    vendor.qti.hardware.camera.device@1.0 \
-    vendor.qti.hardware.camera.device@1.0_vendor
+    vendor.qti.hardware.camera.device@1.0
+#     vendor.qti.hardware.camera.device@1.0_vendor
 #     Snap
 
 # IPv6
@@ -374,9 +372,9 @@ PRODUCT_PACKAGES += \
 #     android.hidl.manager@1.0-java
 
 # VNDK
-PRODUCT_PACKAGES += \
-    vndk-sp
-#     vndk-core \
+# PRODUCT_PACKAGES += \
+#     vndk-sp \
+#     vndk-core
 #     vndk-detect
 
 # PRODUCT_PACKAGES += \
@@ -396,10 +394,17 @@ PRODUCT_PACKAGES += \
 #     build/make/target/product/vndk/init.vndk-27.rc:system/etc/init/init.vndk-27.rc \
 #     $(LOCAL_PATH)/configs/ld.config.26.txt:system/etc/ld.config.26.txt
 
-PRODUCT_COPY_FILES += \
-    prebuilts/vndk/v27/arm64/arch-arm64-armv8-a/shared/vndk-core/android.hardware.gnss@1.0.so:system/lib64/android.hardware.gnss@1.0-v27.so \
-    prebuilts/vndk/v27/arm64/arch-arm64-armv8-a/shared/vndk-core/android.frameworks.sensorservice@1.0.so:system/lib64/android.frameworks.sensorservice@1.0-v27.so \
-    prebuilts/vndk/v27/arm/arch-arm-armv7-a-neon/shared/vndk-core/android.frameworks.sensorservice@1.0.so:system/lib/android.frameworks.sensorservice@1.0-v27.so
+# PRODUCT_COPY_FILES += \
+#     prebuilts/vndk/v27/arm64/arch-arm64-armv8-a/shared/vndk-core/android.hardware.gnss@1.0.so:system/lib64/android.hardware.gnss@1.0-v27.so \
+#     prebuilts/vndk/v27/arm64/arch-arm64-armv8-a/shared/vndk-core/android.frameworks.sensorservice@1.0.so:system/lib64/android.frameworks.sensorservice@1.0-v27.so \
+#     prebuilts/vndk/v27/arm/arch-arm-armv7-a-neon/shared/vndk-core/android.frameworks.sensorservice@1.0.so:system/lib/android.frameworks.sensorservice@1.0-v27.so \
+#     prebuilts/vndk/v27/arm/arch-arm-armv7-a-neon/shared/vndk-core/android.hardware.bluetooth@1.0.so:system/lib/android.hardware.bluetooth@1.0.so \
+#     prebuilts/vndk/v27/arm/arch-arm-armv7-a-neon/shared/vndk-core/android.hardware.camera.device@1.0.so:system/lib/android.hardware.camera.device@1.0.so \
+#     prebuilts/vndk/v27/arm/arch-arm-armv7-a-neon/shared/vndk-core/android.hardware.camera.common@1.0.so:system/lib/android.hardware.camera.common@1.0.so
+#     prebuilts/vndk/v27/arm/arch-arm-armv7-a-neon/shared/vndk-core/android.hardware.camera.device@3.2.so:system/lib/android.hardware.camera.device@3.2.so \
+#     prebuilts/vndk/v27/arm/arch-arm-armv7-a-neon/shared/vndk-core/android.hardware.camera.device@3.3.so:system/lib/android.hardware.camera.device@3.3.so \
+#     prebuilts/vndk/v27/arm/arch-arm-armv7-a-neon/shared/vndk-core/android.hardware.camera.metadata@3.2.so:system/lib/android.hardware.camera.metadata@3.2.so /
+#     prebuilts/vndk/v27/arm/arch-arm-armv7-a-neon/shared/vndk-core/android.hardware.camera.provider@2.4.so:system/lib/android.hardware.camera.provider@2.4.so
 
 # $(call inherit-product, device/halium/whyred/vndk/vndk.mk)
 
