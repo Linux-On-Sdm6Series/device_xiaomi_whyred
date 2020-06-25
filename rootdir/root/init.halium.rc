@@ -41,3 +41,6 @@ on post-fs-data
 # Enable Wifi
 on property:sys.boot_completed=1
     write /sys/module/wlan/parameters/fwpath sta
+
+# System As Root
+export ANDROID_ROOT /system

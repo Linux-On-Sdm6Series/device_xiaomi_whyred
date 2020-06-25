@@ -2599,3 +2599,9 @@ lib64/fm_helium.so
 #Ant
 -lib64/libantradio.so
 -lib/libantradio.so
+
+# VNDK
+vendor/lib/vndk/libbinder.so|134258560d0b48f11019c06d01b2a6e1c3b1d8f1
+vendor/lib/vndk-sp/libcutils.so|a36d6113182b2be72341fa96a8cca7791d9e16db
+vendor/lib/libcameraservice.so|9830e569717410f3da89aa80df3468116641794b
+

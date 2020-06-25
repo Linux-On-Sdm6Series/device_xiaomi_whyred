@@ -77,7 +77,7 @@ low_ram=`getprop ro.config.low_ram`
 
 if [ "$ProductName" == "msm8996" ]; then
       # Enable Adaptive LMK
-      echo 1 > /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk
+      echo 0 > /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk
       echo 81250 > /sys/module/lowmemorykiller/parameters/vmpressure_file_min
 
       configure_zram_parameters
@@ -105,7 +105,7 @@ else
     echo 0 > /sys/module/process_reclaim/parameters/enable_process_reclaim
     echo 70 > /sys/module/process_reclaim/parameters/pressure_max
     echo 30 > /sys/module/process_reclaim/parameters/swap_opt_eff
-    echo 1 > /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk
+    echo 0 > /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk
     if [ "$arch_type" == "aarch64" ] && [ $MemTotal -gt 2097152 ]; then
         echo 10 > /sys/module/process_reclaim/parameters/pressure_min
         echo 1024 > /sys/module/process_reclaim/parameters/per_swap_size

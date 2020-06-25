@@ -20,9 +20,10 @@ DEVICE_PATH := device/halium/whyred
 
 BOARD_VENDOR := xiaomi
 
-TARGET_BOOTLOADER_BOARD_NAME := sdm636
-TARGET_BOARD_PLATFORM_GPU := qcom-adreno509
+TARGET_BOOTLOADER_BOARD_NAME := sdm660
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno512
 TARGET_NO_BOOTLOADER := true
+TARGET_USES_UEFI := true
 TARGET_NO_RECOVERY := true
 TARGET_BOARD_PLATFORM := sdm660
 
@@ -39,11 +40,15 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a73
 
+TARGET_USES_64_BIT_BINDER := true
+
 # QCOM
 BOARD_USES_QCOM_HARDWARE := true
 
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.console=ttyMSM0 earlycon=msm_serial_dm,0xc170000 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1 service_locator.enable=1 swiotlb=1 androidboot.configfs=true androidboot.usbcontroller=a800000.dwc3
+# BOARD_KERNEL_CMDLINE += ro root=/dev/dm-0 rootwait skip_initramfs init=/init
+# BOARD_KERNEL_CMDLINE += dm=\"system none ro,0 1 android-verity /dev/sde20\"
 BOARD_KERNEL_CMDLINE += apparmor=1 security=apparmor # androidboot.selinux=permissive
 BOARD_KERNEL_CMDLINE += audit=0 selinux=0
 BOARD_KERNEL_CMDLINE += console=tty0 # console=ttyMSM0,115200,n8
@@ -60,9 +65,12 @@ TARGET_KERNEL_CONFIG := whyred-perf_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_KERNEL_CLANG_COMPILE := true
 
+# System as root
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
+# BOARD_ROOT_EXTRA_FOLDERS := bluetooth dsp firmware persist
+BOARD_SUPPRESS_SECURE_ERASE := true
 
 # Partitions
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
 BOARD_CACHEIMAGE_PARTITION_SIZE := 268435456

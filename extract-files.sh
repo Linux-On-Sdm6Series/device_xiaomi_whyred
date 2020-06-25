@@ -73,4 +73,15 @@ patchelf --replace-needed android.frameworks.sensorservice@1.0.so android.framew
 patchelf --replace-needed libminikin.so libminikin-v27.so $BLOB_ROOT/vendor/lib/libMiWatermark.so
 patchelf --replace-needed libicuuc.so libicuuc-v27.so $BLOB_ROOT/vendor/lib/libMiWatermark.so
 
+function fix_vendor () {
+    sed -i \
+        "s/\/system\/$1\//\/vendor\/$1\//g" \
+        "$LINEAGE_ROOT"/vendor/"$VENDOR"/"$DEVICE"/proprietary/"$2"
+}
+
+fix_vendor etc vendor/lib/libmmcamera2_sensor_modules.so
+fix_vendor lib vendor/lib64/libremosaiclib.so
+fix_vendor lib vendor/lib/libopcamera_native_modules.so
+
 "$MY_DIR"/setup-makefiles.sh
+
