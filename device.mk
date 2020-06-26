@@ -103,7 +103,7 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@2.0-service:32 \
     android.hardware.soundtrigger@2.0-impl:32 \
     android.hardware.soundtrigger@2.0-service:32 \
-    audio.a2dp.default \
+#     audio.a2dp.default \
     audio.primary.sdm660 \
     audio.r_submix.default \
     audio.usb.default \
@@ -311,7 +311,6 @@ PRODUCT_PACKAGES += \
     init.qti.qseecomd.sh \
     ueventd.rc \
     init.halium.rc \
-    nethunter.rc \
     init.disabled.rc \
     on-post-data.sh
 
@@ -412,58 +411,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libbt-vendor
 
-#=========== Ubuntu Touch / Halium ============#
-
-# Ubuntu Touch UDEV
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/ubuntu/70-whyred.rules:system/halium/lib/udev/rules.d/70-whyred.rules \
-    $(LOCAL_PATH)/ubuntu/display.conf:system/ubuntu/etc/ubuntu-touch-session.d/android.conf
-
-# SPL fix
-PRODUCT_PACKAGES += \
-    getSPL
-
-# Misc
-PRODUCT_PACKAGES += \
-    libandroid \
-    libandroid_runtime \
-    libdrm \
-    vendor.display.config@1.7 \
-    libion
-
-# Media
-PRODUCT_PACKAGES += \
-    libmedia_omx \
-    drmserver \
-    mediadrmserver \
-    mediaextractor
-
-# Hybris compat libs
-PRODUCT_PACKAGES += \
-    libmedia_compat_layer \
-    libsf_compat_layer \
-    libui_compat_layer
-
-# Droidmedia
-PRODUCT_PACKAGES += \
-    libdroidmedia \
-    minimediaservice \
-    minisfservice \
-    miniafservice
-
-# Ubuntu
-PRODUCT_PACKAGES += \
-    libbiometry_fp_api \
-    libubuntu_application_api
-
-# Enable dynamic partition size
-PRODUCT_USE_DYNAMIC_PARTITION_SIZE := true
-
-PRODUCT_PACKAGES += \
-    sensorservice
-
-#=========== Ubuntu Touch / Halium ============#
-
 $(call inherit-product, device/halium/whyred/treble.mk)
-# Call the proprietary setup
+$(call inherit-product, device/halium/whyred/ubuntu/ubports.mk)
 $(call inherit-product, vendor/halium/whyred/whyred-vendor.mk)
