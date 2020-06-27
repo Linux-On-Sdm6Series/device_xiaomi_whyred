@@ -1,2 +1,9 @@
 allow system_server vendor_keylayout_file:file r_file_perms;
 allow system_server wcnss_filter:unix_stream_socket connectto;
+allow system_server lirc_device:chr_file rw_file_perms;
+
+#Test, adding missing sepolicies
+allow system_server user_profile_data_file:dir { open read remove_name write };
+allow system_server user_profile_data_file:file unlink;
+allow system_server radio_prop:property_service set;
+#allow system_server dalvikcache_data_file:file write;

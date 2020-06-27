@@ -848,7 +848,7 @@ vendor/bin/DR_AP_Service
 vendor/bin/LKCore
 vendor/bin/LctDiagSendData
 vendor/bin/PktRspTest
-vendor/bin/SoterProvisioningTool
+# vendor/bin/SoterProvisioningTool
 vendor/bin/StoreKeybox
 vendor/bin/WifiLogger_app
 vendor/bin/adswitch
