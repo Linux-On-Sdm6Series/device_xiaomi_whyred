@@ -414,4 +414,4 @@ PRODUCT_PACKAGES += \
 
 $(call inherit-product, device/halium/whyred/treble.mk)
 $(call inherit-product, device/halium/whyred/ubuntu/ubports.mk)
-$(call inherit-product, vendor/halium/whyred/whyred-vendor.mk)
+$(call inherit-product, device/halium/whyred/vendor/whyred-vendor.mk)
