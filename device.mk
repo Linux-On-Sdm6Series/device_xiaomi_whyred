@@ -330,6 +330,7 @@ PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0 \
     android.hardware.camera.provider@2.4-impl:32 \
     android.hardware.camera.provider@2.4-service:32 \
+    android.hardware.camera.provider@2.4-service.whyred \
     libbinder_vendor \
     vendor.qti.hardware.camera.device@1.0
 #     vendor.qti.hardware.camera.device@1.0_vendor
