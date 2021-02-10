@@ -406,12 +406,12 @@ PRODUCT_PACKAGES += \
 #     prebuilts/vndk/v27/arm/arch-arm-armv7-a-neon/shared/vndk-core/android.hardware.camera.metadata@3.2.so:system/lib/android.hardware.camera.metadata@3.2.so /
 #     prebuilts/vndk/v27/arm/arch-arm-armv7-a-neon/shared/vndk-core/android.hardware.camera.provider@2.4.so:system/lib/android.hardware.camera.provider@2.4.so
 
-# $(call inherit-product, device/halium/whyred/vndk/vndk.mk)
+# $(call inherit-product, device/xiaomi/whyred/vndk/vndk.mk)
 
 # Bluetooth
 PRODUCT_PACKAGES += \
     libbt-vendor
 
-$(call inherit-product, device/halium/whyred/treble.mk)
-$(call inherit-product, device/halium/whyred/ubuntu/ubports.mk)
-$(call inherit-product, vendor/halium/whyred/whyred-vendor.mk)
+$(call inherit-product, device/xiaomi/whyred/treble.mk)
+$(call inherit-product, device/xiaomi/whyred/ubuntu/ubports.mk)
+$(call inherit-product, vendor/xiaomi/whyred/whyred-vendor.mk)
