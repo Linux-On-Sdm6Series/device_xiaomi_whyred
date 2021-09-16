@@ -3,9 +3,9 @@ PRODUCT_PACKAGES += \
     nethunter.rc
 
 # Ubuntu Touch UDEV
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/ubuntu/70-whyred.rules:system/halium/lib/udev/rules.d/70-whyred.rules \
-    $(DEVICE_PATH)/ubuntu/display.conf:system/ubuntu/etc/ubuntu-touch-session.d/android.conf
+# PRODUCT_COPY_FILES += \
+#     $(DEVICE_PATH)/ubuntu/70-whyred.rules:system/halium/lib/udev/rules.d/70-whyred.rules \
+#     $(DEVICE_PATH)/ubuntu/display.conf:system/ubuntu/etc/ubuntu-touch-session.d/android.conf
 
 # SPL fix
 PRODUCT_PACKAGES += \
